@@ -1,0 +1,140 @@
+{
+  "CARDDATA": {
+    "kni": {
+      "speed": 60,
+      "health": 1785,
+      "type": "minitank",
+      "targets": "ground",
+      "elixir": 3,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "gia": {
+      "speed": 45,
+      "health": 4090,
+      "type": "tank",
+      "targets": "buildings",
+      "elixir": 5,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "mpk": {
+      "speed": 90,
+      "health": 1756,
+      "type": "minitank",
+      "targets": "ground",
+      "elixir": 4,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "arc": {
+      "speed": 60,
+      "health": 304,
+      "type": "ranged",
+      "targets": "troops",
+      "elixir": 3,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "mns": {
+      "speed": 90,
+      "health": 230,
+      "type": "swarm",
+      "targets": "troops",
+      "elixir": 3,
+      "flying": true,
+      "spell": false,
+      "building": false
+    },
+    "arr": {
+      "speed": "N/A",
+      "health": "N/A",
+      "type": "antiswarm",
+      "targets": "troops",
+      "elixir": 3,
+      "flying": false,
+      "spell": true,
+      "building": false
+    },
+    "fir": {
+      "speed": "N/A",
+      "health": "N/A",
+      "type": "antitank",
+      "targets": "troops",
+      "elixir": 4,
+      "flying": false,
+      "spell": true,
+      "building": false
+    },
+    "mus": {
+      "speed": 60,
+      "health": 792,
+      "type": "ranged",
+      "targets": "troops",
+      "elixir": 4,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "spe": {
+      "speed": 120,
+      "health": 146,
+      "type": "rangedswarm",
+      "targets": "troops",
+      "elixir": 2,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "gob": {
+      "speed": 120,
+      "health": 126,
+      "type": "swarm",
+      "targets": "ground",
+      "elixir": 2,
+      "flying": false,
+      "spell": false,
+      "building": false
+    },
+    "gca": {
+      "speed": "N/A",
+      "health": 1800,
+      "type": "distraction",
+      "targets": "troops",
+      "elixir": 4,
+      "flying": false,
+      "spell": false,
+      "building": true
+    }
+  },
+  "METADATA": {
+    "data_format": "[speed, health, type, targets, elixir, flying t/f, spell t/f, building t/f]",
+    "card_types": [
+      "tank",
+      "minitank",
+      "swarm",
+      "antiswarm",
+      "ranged",
+      "distraction",
+      "antitank",
+      "rangedswarm"
+    ],
+    "card_names": {
+      "kni": "Knight",
+      "gia": "Giant",
+      "mpk": "Mini P.E.K.K.A.",
+      "arc": "Archers",
+      "mns": "Minions",
+      "arr": "Arrows",
+      "fir": "Fireball",
+      "mus": "Musketeer",
+      "spe": "Spear Goblins",
+      "gob": "Goblins",
+      "gca": "Goblin Cage"
+    }
+  }
+}
