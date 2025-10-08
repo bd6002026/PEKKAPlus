@@ -14,14 +14,17 @@ except FileNotFoundError:
 rightpocket = False
 leftpocket = False
 currentinput = 'null'
-# Position codes mapped to spreadsheet cells (18 wide x 15 tall, A-R cols, 1-15 rows)
+# Position codes mapped to spreadsheet cells (18 wide x 32 tall, A-R cols, 1-32 rows, 2 for bridge)
 POSITIONS = {
-    'bl': 'D2',  'br': 'O2',   # Bridge
-    'fl': 'G14', 'fr': 'L14',  # Far back
-    'ml': 'I5',  'mr': 'J5',   # Middle
-    'sl': 'A6',  'sr': 'R6',   # Sides
-    'tl': 'D5',  'tr': 'O5',   # Towers
-    'pl': 'I5',  'pr': 'J5'    # Pocket
+    'bl': 'D15',  'br': 'O15',   # Bridge
+    'fl': 'G2', 'fr': 'L2',      # Far back
+    'ml': 'I9',  'mr': 'J9',     # Middle
+    'sl': 'A10',  'sr': 'R10',   # Sides
+    'tl': 'D11',  'tr': 'O11',   # Towers
+    'pl': 'I22',  'pr': 'J22',   # Pocket
+    'ol': 'D21',  'or': 'O21',   # Offense (in front of your princess tower)
+    'kl': 'I26', 'kr': 'J26',    # King tower
+    'rl': 'D23', 'rr': 'O23'     # P*r*incess tower
 }
 
 def cell_to_coords(cell):
@@ -85,15 +88,25 @@ def timeToDestination(card, start, end):
         return float('inf')
         
     total_distance = 0.0
+
+    (x1,y1) = end
     
     if not is_flying:
         # Ground unit logic using the global currentinput (the location code)
         if(currentinput == 'fl'):
-            waypoint = cell_to_coords('E6')
-            total_distance = distance(start, waypoint) + distance(waypoint, end)
+            if(x1 > 17):
+                waypoint = cell_to_coords('G8')
+                total_distance = distance(start, waypoint) + distance(waypoint, cell_to_coords('D15')) + distance(cell_to_coords('D15'), end)
+            else:
+                waypoint = cell_to_coords('G8')
+                total_distance = distance(start, waypoint) + distance(waypoint, end)
         elif(currentinput == 'fr'):
-            waypoint = cell_to_coords('N6')
-            total_distance = distance(start, waypoint) + distance(waypoint, end)
+            if(x1 > 17):
+                waypoint = 'L8'
+                total_distance = distance(start, waypoint) + distance(waypoint, cell_to_coords('O15')) + distance(cell_to_coords('O15'), end)
+            else:
+                waypoint = cell_to_coords('L8')
+                total_distance = distance(start, waypoint) + distance(waypoint, end)
         else:
             total_distance = distance(start,end)
             
@@ -110,10 +123,10 @@ def timeToDestination(card, start, end):
     return time * 60
 
 
-currentinput = 'fl' 
+currentinput = 'pl' 
 card_key = 'mpk'
-start_loc_code = 'fl'
-end_loc_code = 'bl'
+start_loc_code = 'pl'
+end_loc_code = 'rr'
 
 start_coords = COORDS[start_loc_code]  # Middle Left (I5 -> (8, 4))
 end_coords = COORDS[end_loc_code]      # Bridge Left (D2 -> (3, 1))
