@@ -1,8 +1,13 @@
 {
   "CARDDATA": {
     "kni": {
-      "speed": 60,
-      "health": 1785,
+      "speed": 82.2,
+      "health": 1766,
+      "damage": 202,
+      "hitspeed": 1.2,
+      "firsthit": 0.5,
+      "attackradius": 1.2,
+      "sightrange": 5.5,
       "type": "minitank",
       "targets": "ground",
       "elixir": 3,
@@ -11,8 +16,13 @@
       "building": false
     },
     "gia": {
-      "speed": 45,
+      "speed": 55.2,
       "health": 4090,
+      "damage": 253,
+      "hitspeed": 1.5,
+      "firsthit": 0.5,
+      "attackradius": 1.2,
+      "sightrange": 7.5,
       "type": "tank",
       "targets": "buildings",
       "elixir": 5,
@@ -21,8 +31,13 @@
       "building": false
     },
     "mpk": {
-      "speed": 90,
-      "health": 1756,
+      "speed": 106.2,
+      "health": 1433,
+      "damage": 755,
+      "hitspeed": 1.6,
+      "firsthit": 0.5,
+      "attackradius": 0.8,
+      "sightrange": 5.5,
       "type": "minitank",
       "targets": "ground",
       "elixir": 4,
@@ -31,8 +46,13 @@
       "building": false
     },
     "arc": {
-      "speed": 60,
+      "speed": 68.4,
       "health": 304,
+      "damage": 112,
+      "hitspeed": 0.9,
+      "firsthit": 0.5,
+      "attackradius": 5,
+      "sightrange": 5.5,
       "type": "ranged",
       "targets": "troops",
       "elixir": 3,
@@ -41,11 +61,16 @@
       "building": false
     },
     "mns": {
-      "speed": 90,
+      "speed": 87,
       "health": 230,
+      "damage": 107,
+      "hitspeed": 1.1,
+      "firsthit": 0.5,
+      "attackradius": 2.5,
+      "sightrange": 5.5,
       "type": "swarm",
       "targets": "troops",
-      "elixir": 3,
+      "elixir": 3, 
       "flying": true,
       "spell": false,
       "building": false
@@ -53,6 +78,11 @@
     "arr": {
       "speed": "N/A",
       "health": "N/A",
+      "damage": 366,
+      "hitspeed": "N/A",
+      "firsthit": "N/A",
+      "attackradius": 3.5,
+      "sightrange": 0,
       "type": "antiswarm",
       "targets": "troops",
       "elixir": 3,
@@ -63,6 +93,11 @@
     "fir": {
       "speed": "N/A",
       "health": "N/A",
+      "damage": 688,
+      "hitspeed": "N/A",
+      "firsthit": "N/A",
+      "attackradius": 2.5,
+      "sightrange": 0,
       "type": "antitank",
       "targets": "troops",
       "elixir": 4,
@@ -71,8 +106,13 @@
       "building": false
     },
     "mus": {
-      "speed": 60,
-      "health": 792,
+      "speed": 72,
+      "health": 721,
+      "damage": 217,
+      "hitspeed": 1,
+      "firsthit": 0.7,
+      "attackradius": 6,
+      "sightrange": 7.2,
       "type": "ranged",
       "targets": "troops",
       "elixir": 4,
@@ -81,8 +121,13 @@
       "building": false
     },
     "spe": {
-      "speed": 120,
-      "health": 146,
+      "speed": 144,
+      "health": 133,
+      "damage": 81,
+      "hitspeed": 1.7,
+      "firsthit": 0.5,
+      "attackradius": 5.5,
+      "sightrange": 5.5,
       "type": "rangedswarm",
       "targets": "troops",
       "elixir": 2,
@@ -91,8 +136,13 @@
       "building": false
     },
     "gob": {
-      "speed": 120,
-      "health": 126,
+      "speed": 144,
+      "health": 202,
+      "damage": 120,
+      "hitspeed": 1.1,
+      "firsthit": 0.6,
+      "attackradius": 0.8,
+      "sightrange": 5.5,
       "type": "swarm",
       "targets": "ground",
       "elixir": 2,
@@ -100,12 +150,17 @@
       "spell": false,
       "building": false
     },
-    "gca": {
+    "pri": {
       "speed": "N/A",
-      "health": 1800,
-      "type": "distraction",
+      "health": 3052,
+      "damage": 109,
+      "hitspeed": 0.8,
+      "firsthit": "N/A",
+      "attackradius": 7.5,
+      "sightrange": 7.5,
+      "type": "troop",
       "targets": "troops",
-      "elixir": 4,
+      "elixir": "N/A",
       "flying": false,
       "spell": false,
       "building": true
@@ -133,8 +188,7 @@
       "fir": "Fireball",
       "mus": "Musketeer",
       "spe": "Spear Goblins",
-      "gob": "Goblins",
-      "gca": "Goblin Cage"
+      "gob": "Goblins"
     }
   }
 }
